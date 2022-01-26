@@ -1,0 +1,444 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600&family=Nunito:wght@700;900&family=Poppins:wght@500&family=Raleway&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+/* ESTILOS GENERALES */
+.contenedor{
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    padding: 36px 0;
+    overflow: hidden;
+}
+.titulo{
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 600;
+    font-size: 35px;
+    margin-bottom: 30px;
+}
+.titulo.center{
+    text-align: center;
+}
+.parrafos{
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 300;
+    font-size: 24px;
+    letter-spacing: 1.2;
+}
+.parrafos.center{
+    text-align: center;
+}
+/* ESTILOS HOME */
+header{
+    width: 100%;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+    background-image: linear-gradient(to right, hsla(205, 26%, 25%, 0.473),hsla(34, 6%, 46%, 0.349)), url(imagenes/art-background-2.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+.nav-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 55px;
+    padding: 6px 0;
+}
+.nav-container > a{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    margin: 0 8px;
+    padding: 8px 10px;
+    border-radius: 12px;
+    color: rgb(255, 255, 255);
+    transition: 0.4s ease-out;
+}
+.nav-container > a:hover{
+    background-color: hsla(0, 0%, 89%, 0.411);
+}
+.nav-container > a.active{
+    background-color: hsl(9, 100%, 64%);
+}
+.info-header-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    height: 245px;
+    margin: auto;
+    padding: 16px 0;
+    overflow: hidden;
+}
+.info-header-container > h1{
+    font-family: 'Nunito', sans-serif;
+    font-size: 48px;
+    font-weight: 900;
+    color: white;
+}
+.wave{
+    position: absolute;
+    width: 100%;
+    height: 85px;
+    bottom: 0;
+    left: 0;
+}
+.info{
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    flex-direction: column;
+}
+.info img{
+    width: 42%;
+    margin-bottom: 18px;
+}
+.info p{
+    width: 70%;
+}
+.background-about{
+    background: -webkit-linear-gradient(to right, hsla(251, 22%, 14%, 0.692), hsla(249, 9%, 45%, 0.89));
+    background: linear-gradient(to right, hsla(251, 22%, 14%, 0.692), hsla(249, 9%, 45%, 0.89)); 
+}
+.about{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.about img{
+    width: 42%;
+}
+.contenedor-textos-about{
+    width: 46%;
+    color: hsla(0, 0%, 100%, 0.788);
+}
+.contenedor-cards{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+.card{
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    border-radius: 18px;
+    color: hsla(0, 0%, 100%, 0.788);
+    background: -webkit-linear-gradient(to right, hsla(324, 35%, 50%, 0.877), hsla(279, 68%, 19%, 0.63));
+    background: linear-gradient(to right, hsla(324, 35%, 50%, 0.877), hsla(279, 68%, 19%, 0.63));
+    box-shadow: 0px 6px 12px rgba(53, 53, 53, 0.541);
+}
+.card img{
+    width: 160px;
+    min-width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 4px solid rgba(255, 255, 255, 0.678);
+    object-fit: cover;
+}
+.card h2{
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+}
+.card span{
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+}
+.redes-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    margin-top: 10px;
+    border-top: 3px solid white;
+}
+.redes-card a{
+    margin: 0 12px;
+    font-size: 30px;
+    color: rgba(255, 255, 255, 0.712);
+    transition: 0.2s ease-out;
+}
+.redes-card a:hover{
+    color: hsl(9, 100%, 64%);
+}
+/* ESTILOS PORTAFOLIO */
+.header-portafolio{
+    width: 100%;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-image: linear-gradient(to right, hsla(205, 26%, 25%, 0.404),hsla(34, 6%, 46%, 0.308)), url(imagenes/art-background-3.jpg);
+}
+.info-portafolio{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.info-portafolio img{
+    width: 46%;
+}
+.info-portafolio p{
+    width: 48%;
+}
+/* ESTILOS GRID */
+.contenedor-grid-galeria{
+    width: 90%;
+    max-width: 800px;
+    height: 1600px;
+    margin: 18px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    gap: 5px;
+    grid-template-areas: 
+    "img-1 img-1 img-2"
+    "img-1 img-1 img-2"
+    "img-1 img-1 img-2"
+    "img-1 img-1 img-2"
+    "img-3 img-4 img-4"
+    "img-3 img-4 img-4"
+    "img-3 img-4 img-4"
+    "img-3 img-4 img-4"
+    "img-5 img-5 img-6"
+    "img-5 img-5 img-6"
+    "img-5 img-5 img-6"
+    "img-5 img-5 img-6";
+}
+.img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.img:hover{
+    filter: grayscale(28%);
+    cursor: pointer;
+    transition: filter .5s;
+}
+.img-1{
+    grid-area: img-1;
+}
+.img-2{
+    grid-area: img-2;
+}
+.img-3{
+    grid-area: img-3;
+}
+.img-4{
+    grid-area: img-4;
+}
+.img-5{
+    grid-area: img-5;
+}
+.img-6{
+    grid-area: img-6;
+}
+.contenedor-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    transform: translatex(100%);
+    background-color: rgba(0, 0, 0, 0.801);
+    transition: transform .4s ease-in-out;
+}
+.move{
+    transform: translatex(0);
+}
+.img-show{
+    height: 90%;
+    width: 94%;
+    max-width: 600px;
+    border-radius: 10px;
+    display: block;
+    object-fit: cover;
+    transition: transform .2s .5s;
+}
+.bx.bxs-x-circle{
+    position: absolute;
+    color: #fff;
+    top: 20px;
+    right: 10px;
+    font-size: 40px;
+    cursor: pointer;
+}
+/* AQUI EMPIEZAN LOS ESTILOS FOOTER */
+.wave-footer{
+    position: relative;
+    width: 100%;
+    height: 120px;
+}
+.wave-2{
+    height: 100px;
+}
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    background-color: rgb(53, 53, 53);
+}
+.footer-portafolio{
+    margin-top: 36px;
+    height: 260px;
+}
+.item-footer{
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+    width: 90%;
+    max-width: 800px;
+    padding: 9px;
+    text-align: center;
+}
+.item-footer > h2{
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+    font-weight: 100;
+    color: hsla(0, 0%, 100%, 0.979);
+    letter-spacing: 1.2px;
+}
+.item-footer a{
+    font-family: 'Raleway', sans-serif;
+    font-size: 12px;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.712);
+    letter-spacing: 1.2px;
+    transition: 0.2s ease-out;
+}
+.item-footer a:hover{
+    color: hsl(9, 100%, 64%);
+}
+.border{
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.712);
+    letter-spacing: 1.2px;
+    border-top: 2px solid hsla(0, 0%, 55%, 0.418);
+}
+
+@media  screen and (max-width: 600px){
+    /* ESTILOS GENERALES */
+    .titulo{
+        font-size: 30px;
+        text-align: center;
+    }
+    .parrafos{
+        text-align: center;
+        font-size: 24px;
+    }
+    /* ESTILOS CONTENIDO HOME */
+    .info img{
+        width: 85%;
+    }
+    .info p{
+        width: 100%;
+    }
+    /* ESTILOS ABOUT */
+    .about{
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    } 
+    .about img{
+        width: 85%;
+        margin-top: 18px;
+    }
+    .contenedor-textos-about{
+        width: 100%;
+    }
+    /* ESTILOS CARDS */
+    .contenedor-cards{
+        display: grid;
+        grid-template-columns: none;
+        grid-template-rows: 1fr 1fr;
+    }
+    /* ESTILOS PORTAFOLIO */
+    .info-portafolio{
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+    .info-portafolio img{
+        width: 92%;
+        margin-top: 18px;
+    }
+    .info-portafolio p{
+        width: 100%;
+    }
+    /* ESTILOS GALERIA */
+    .contenedor-grid-galeria{
+        height: 980px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+        gap: 2px;
+        grid-template-areas: 
+        "img-1 img-1 img-2 img-2"
+        "img-1 img-1 img-2 img-2"
+        "img-3 img-3 img-4 img-4"
+        "img-3 img-3 img-4 img-4"
+        "img-5 img-5 img-6 img-6"
+        "img-5 img-5 img-6 img-6"
+    }
+    .img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+    .img-1{
+        grid-area: img-1;
+    }
+    .img-2{
+        grid-area: img-2;
+    }
+    .img-3{
+        grid-area: img-3;
+    }
+    .img-4{
+        grid-area: img-4;
+    }
+    .img-5{
+        grid-area: img-5;
+    }
+    .img-6{
+        grid-area: img-6;
+    }  
+    .img-show{
+        width: 92%;
+        height: 80%;
+    }
+}
+ /* ESTILOS FOOTER */
+ @media screen and (min-width: 600px){
+    .info-header-container > h2{
+        font-size: 60px;
+    }
+    .item-footer > h2{
+        font-size: 24px;
+    }
+    .item-footer a{
+        font-size: 15px;
+    }
+}
