@@ -1,9 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600&family=Nunito:wght@700;900&family=Poppins:wght@500&family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600&family=Nunito:wght@700;800;900&family=Poppins:wght@500&family=Raleway&display=swap');
 *{
     margin: 0;
     padding: 0;
     text-decoration: none;
     box-sizing: border-box;
+}
+:root{
+    --color-enlaces: hsl(37, 95%, 56%);
+    --color-primario: hsl(0, 0%, 21%);
+    --color-secundario: hsl(243, 49%, 53%);
+}
+html{
+  scroll-behavior: smooth;  
 }
 
 /* ESTILOS GENERALES */
@@ -15,13 +23,14 @@
     overflow: hidden;
 }
 .titulo{
-    font-family: 'Nunito Sans', sans-serif;
-    font-weight: 600;
-    font-size: 35px;
-    margin-bottom: 30px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 800;
+    font-size: 40px;
+    margin-bottom: 25px;
 }
 .titulo.center{
     text-align: center;
+    color: rgba(0, 0, 0, 0.664);
 }
 .parrafos{
     font-family: 'Nunito Sans', sans-serif;
@@ -32,55 +41,68 @@
 .parrafos.center{
     text-align: center;
 }
+
 /* ESTILOS HOME */
 header{
     width: 100%;
-    height: 400px;
+    height: 420px;
     position: relative;
     overflow: hidden;
-    background-image: linear-gradient(to right, hsla(205, 26%, 25%, 0.473),hsla(34, 6%, 46%, 0.349)), url(imagenes/art-background-2.jpg);
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
+    background: var(--color-primario);
 }
-.nav-container{
+.nav{
+    position: fixed;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 55px;
-    padding: 6px 0;
+    padding: 20px;
+    transition: all 0.5s ease;
 }
-.nav-container > a{
+.nav.scrolling{
+    padding: 10px;
+    background: hsla(0, 0%, 49%, 0.842);
+    box-shadow: 0px 5px 5px hsla(0, 0%, 40%, 0.507);
+}
+.nav > a{
     font-family: 'Poppins', sans-serif;
-    font-weight: 600;
+    font-weight: 500;
+    font-size: 16px;
     letter-spacing: 1.2px;
     margin: 0 8px;
+    color: rgb(255, 255, 255);
+    transition: 0.3s ease-out;
+}
+.nav > a:hover{
+    background-color: hsla(37, 95%, 56%, 0.582);
+    padding: 6px 12px;
+    border-radius: 12px;
+}
+.nav > a.active{
     padding: 8px 10px;
     border-radius: 12px;
-    color: rgb(255, 255, 255);
-    transition: 0.4s ease-out;
-}
-.nav-container > a:hover{
-    background-color: hsla(0, 0%, 89%, 0.411);
-}
-.nav-container > a.active{
-    background-color: hsl(9, 100%, 64%);
+    background: var(--color-enlaces);
 }
 .info-header-container{
+    opacity: 1;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 90%;
+    height: 100%;
     max-width: 1200px;
-    height: 245px;
     margin: auto;
     padding: 16px 0;
     overflow: hidden;
+    transition: all 0.5s ease-in-out;
+}
+.info-header-container.text-scroll{
+    opacity: 0;
+    transform: translateY(-100px);
 }
 .info-header-container > h1{
     font-family: 'Nunito', sans-serif;
-    font-size: 48px;
+    font-size: 64px;
     font-weight: 900;
     color: white;
 }
@@ -90,6 +112,7 @@ header{
     height: 85px;
     bottom: 0;
     left: 0;
+    transition: all 0.5s ease;
 }
 .info{
     display: flex;
@@ -99,7 +122,8 @@ header{
 }
 .info img{
     width: 42%;
-    margin-bottom: 18px;
+    margin-bottom: 20px;
+    opacity: 1;
 }
 .info p{
     width: 70%;
@@ -133,8 +157,8 @@ header{
     text-align: center;
     border-radius: 18px;
     color: hsla(0, 0%, 100%, 0.788);
-    background: -webkit-linear-gradient(to right, hsla(324, 35%, 50%, 0.877), hsla(279, 68%, 19%, 0.63));
-    background: linear-gradient(to right, hsla(324, 35%, 50%, 0.877), hsla(279, 68%, 19%, 0.63));
+    background: -webkit-linear-gradient(to right, hsla(251, 22%, 14%, 0.692), hsla(249, 9%, 45%, 0.89));
+    background: linear-gradient(to right, hsla(251, 22%, 14%, 0.692), hsla(249, 9%, 45%, 0.89));  
     box-shadow: 0px 6px 12px rgba(53, 53, 53, 0.541);
 }
 .card img{
@@ -179,7 +203,8 @@ header{
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
-    background-image: linear-gradient(to right, hsla(205, 26%, 25%, 0.404),hsla(34, 6%, 46%, 0.308)), url(imagenes/art-background-3.jpg);
+    background-image: linear-gradient(to right, hsla(205, 26%, 25%, 0.404),hsla(34, 6%, 46%, 0.308)), url(imagenes/art-background-2.jpg);
+    
 }
 .info-portafolio{
     display: flex;
@@ -223,7 +248,7 @@ header{
     border-radius: 10px;
 }
 .img:hover{
-    filter: grayscale(28%);
+    /* filter: grayscale(28%); */
     cursor: pointer;
     transition: filter .5s;
 }
@@ -295,7 +320,7 @@ footer{
     width: 100%;
     height: 200px;
     overflow: hidden;
-    background-color: rgb(53, 53, 53);
+    background-color: var(--color-primario);
 }
 .footer-portafolio{
     margin-top: 36px;
@@ -326,7 +351,7 @@ footer{
     transition: 0.2s ease-out;
 }
 .item-footer a:hover{
-    color: hsl(9, 100%, 64%);
+    color: var(--color-enlaces);
 }
 .border{
     font-family: 'Raleway', sans-serif;
@@ -336,17 +361,66 @@ footer{
     letter-spacing: 1.2px;
     border-top: 2px solid hsla(0, 0%, 55%, 0.418);
 }
-
+#boton{
+    opacity: 0;
+    position: absolute;
+}
 @media  screen and (max-width: 600px){
     /* ESTILOS GENERALES */
     .titulo{
-        font-size: 30px;
+        font-size: 32px;
         text-align: center;
     }
     .parrafos{
         text-align: center;
-        font-size: 24px;
+        font-size: 22px;
     }
+    .info-header-container > h1{
+        font-size: 55px;
+    }
+    /* RESPONSIVE NAV */
+    .nav{
+        position: fixed;
+        background-color: hsla(0, 0%, 49%, 0.952);
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
+        flex-direction: column;
+        top: 0;
+        right: 0;
+        width: 260px;
+        height: 100vh;
+        padding: 20px;
+        opacity: 0.6;
+        z-index: 1;
+        transform: translateX(262px);
+        transition: all 0.3s ease-out;
+    }
+    .nav-show{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+    .nav a{
+        margin-top: 30px;
+        margin-left: 0;
+    }
+    #boton{
+        opacity: 1;
+        top: 20px;
+        right: 20px;
+        width: 30px;
+        cursor: pointer;
+    }
+    #background-nav{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.404);
+        display: none;
+        transition: all 0.3s ease-out;
+    }
+
     /* ESTILOS CONTENIDO HOME */
     .info img{
         width: 85%;
@@ -362,7 +436,7 @@ footer{
     } 
     .about img{
         width: 85%;
-        margin-top: 18px;
+        margin-top: 35px;
     }
     .contenedor-textos-about{
         width: 100%;
@@ -380,8 +454,8 @@ footer{
         align-items: center;
     }
     .info-portafolio img{
-        width: 92%;
-        margin-top: 18px;
+        width: 90%;
+        margin-top: 35px;
     }
     .info-portafolio p{
         width: 100%;
